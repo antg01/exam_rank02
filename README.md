@@ -8,7 +8,7 @@ This function a simplified version of the `printf` function in C, named `ft_prin
 
 This function a simplified version of a `get_next_line` function in C, which reads a file line by line. The implementation includes helper functions to manage dynamic string allocation and concatenation.
 
-## Union
+## `Union` Implementation
 ```
 Assignment name  : union
 Expected files   : union.c
@@ -39,7 +39,7 @@ $
 $>
 ```
 
-### Inter
+## `Inter` Implementation
 ````
 Assignment name  : inter
 Expected files   : inter.c
