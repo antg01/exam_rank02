@@ -1,6 +1,6 @@
 # include <unistd.h>
 
-int has_char(char *str, char c)
+int is_in_str(char *str, char c)
 {
     while (*str)
     {
@@ -18,7 +18,7 @@ void union_str(char *str1, char *str2)
 
     while (*str1)
     {
-        if (!has_char(seen, *str1))
+        if (!is_in_str(seen, *str1))
         {
             seen[i] = *str1;
             write(1, str1, 1);
@@ -28,7 +28,7 @@ void union_str(char *str1, char *str2)
     }
     while (*str2)
     {
-        if (!has_char(seen, *str2))
+        if (!is_in_str(seen, *str2))
         {
             seen[i] = *str2;
             write(1, str2, 1);

@@ -2,6 +2,9 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <fcntl.h>
+
+#include "get_next_line.h"
+
 char    *ft_join(char *line, char *buffer, int size, int from, int to)
 {
     int     i;
@@ -38,6 +41,7 @@ char *get_next_line(int fd)
     static  int cursor = 0;
     static  int bytes_read = -1;
     static  char buffer[BUFFER_SIZE];
+
     if (fd < 0 || BUFFER_SIZE < 1)
         return (NULL);
     if (cursor >= bytes_read)

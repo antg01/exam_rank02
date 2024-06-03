@@ -1,6 +1,6 @@
 #include <unistd.h>
 
-int has_char(char *str, char c)
+int is_in_str(char *str, char c)
 {
     while (*str)
     {
@@ -13,12 +13,12 @@ int has_char(char *str, char c)
 
 void inter(char *str1, char *str2)
 {
-    char printed[128] = {0};
+    char printed[256] = {0};
     int i = 0;
 
     while (*str1)
     {
-        if (has_char(str2, *str1) && !has_char(printed, *str1))
+        if (is_in_str(str2, *str1) && !is_in_str(printed, *str1))
         {
             write(1, str1, 1);
             printed[i] = *str1;
