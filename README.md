@@ -40,7 +40,7 @@ $>
 ```
 
 ## `Inter` Implementation
-````
+```
 Assignment name  : inter
 Expected files   : inter.c
 Allowed functions: write
