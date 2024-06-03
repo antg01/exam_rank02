@@ -1,3 +1,4 @@
+#include <sys/fcntl.h>
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -81,4 +82,19 @@ char *get_next_line(int fd)
         return (NULL);
     }
     return (line);
+}
+
+int main()
+{
+	int 	fd;
+	char	*line;
+
+	fd = open("text", O_RDONLY);
+	while ((line = get_next_line(fd)) != NULL) {
+		printf("%s", line);
+		free(line);
+	}
+	close(fd);
+	printf("\n");
+	return 0;
 }
