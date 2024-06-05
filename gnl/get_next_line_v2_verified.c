@@ -1,8 +1,5 @@
-#include <sys/fcntl.h>
-#include <unistd.h>
-#include <stdlib.h>
 #include <stdio.h>
-#include <fcntl.h>
+#include <sys/fcntl.h>
 
 #include "get_next_line.h"
 
@@ -10,6 +7,7 @@ char    *ft_join(char *line, char *buffer, int size, int from, int to)
 {
     int     i;
     char    *res;
+
     i = 0;
     if(!line)
         return (NULL);
@@ -34,11 +32,12 @@ char    *ft_join(char *line, char *buffer, int size, int from, int to)
     free(line);
     return (res);
 }
+
 char *get_next_line(int fd)
 {
+    char    *line;
     int     start;
     int     size;
-    char    *line;
     static  int cursor = 0;
     static  int bytes_read = -1;
     static  char buffer[BUFFER_SIZE];
